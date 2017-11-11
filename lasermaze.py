@@ -24,7 +24,10 @@ class LaserMaze():
         self.location[0] = eval(self.location[0])
         self.location[1] = eval(self.location[1])
         self.inputf = np.array(inputf[2:])
-        self.df = pd.DataFrame(self.inputf, columns=['x', 'y', 'mir'])
+        try:
+            self.df = pd.DataFrame(self.inputf, columns=['x', 'y', 'mir'])
+        except ValueError:
+            raise ValueError("Wrong input file format. Please check there is no additional space.")
         self.df.x = self.df.x.astype(np.int)
         self.df.y = self.df.y.astype(np.int)
     
@@ -44,6 +47,8 @@ class LaserMaze():
                             self.location[2] = 'W'
                         elif self.location[2] == '/':
                             self.location[2] = 'E'
+                        else:
+                            raise ValueError("Wrong mark ({}) at x={:d} y={:d}.".format(self.location[2], self.location[0], self.location[1]))
                     except IndexError:
                         self.traversed += self.gridsize[1] - self.location[1]
                         return self.traversed, self.location[0], self.gridsize[1] - 1
@@ -56,6 +61,8 @@ class LaserMaze():
                             self.location[2] = 'E'
                         elif self.location[2] == '/':
                             self.location[2] = 'W'
+                        else:
+                            raise ValueError("Wrong mark ({}) at x={:d} y={:d}.".format(self.location[2], self.location[0], self.location[1]))
                     except IndexError:
                         self.traversed += self.location[1]
                         return self.traversed, self.location[0], 0
@@ -69,6 +76,8 @@ class LaserMaze():
                             self.location[2] = 'N'
                         elif self.location[2] == '/':
                             self.location[2] = 'S'
+                        else:
+                            raise ValueError("Wrong mark ({}) at x={:d} y={:d}.".format(self.location[2], self.location[0], self.location[1]))
                     except IndexError:
                         self.traversed += self.location[0]
                         return self.traversed, 0, self.location[1]
@@ -82,6 +91,8 @@ class LaserMaze():
                             self.location[2] = 'S'
                         elif self.location[2] == '/':
                             self.location[2] = 'N'
+                        else:
+                            raise ValueError("Wrong mark ({}) at x={:d} y={:d}.".format(self.location[2], self.location[0], self.location[1]))
                     except IndexError:
                         self.traversed += self.gridsize[0] - self.location[0]
                         return self.traversed, self.gridsize[0] - 1, self.location[1]
@@ -90,5 +101,8 @@ class LaserMaze():
         with open(self.outputpath, 'w') as f:
             if self.result == -1:
                 f.write(str(self.result))
+            else:
+                f.write("{:d}\n{:d} {:d}".format(self.result[0], self.result[1], self.result[2]))
+
             else:
                 f.write("{:d}\n{:d} {:d}".format(self.result[0], self.result[1], self.result[2]))
