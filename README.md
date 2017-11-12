@@ -1,7 +1,7 @@
 # LM
 Fun Project!
 
-<img align="https://github.com/whosivan/LM/blob/master/img/laser_maze.jpg" alt="..."></p>
+<img align="https://raw.githubusercontent.com/whosivan/LM/master/img/laser_maze.jpg" alt="..."></p>
 **LM_v1.0**
 
 ------------------------
