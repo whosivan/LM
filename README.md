@@ -1,7 +1,6 @@
 # LM
 Fun Project!
-
-<img align="https://github.com/whosivan/LM/blob/master/img/laser_maze.jpg?raw=true" alt="..."></p>
+![alt text](https://github.com/whosivan/LM/blob/master/img/laser_maze.jpg?raw=true "Laser Maze")</p>
 **LM_v1.0**
 
 ------------------------
