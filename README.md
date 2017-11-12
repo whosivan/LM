@@ -1,5 +1,5 @@
 # LM
-Fun Project!
+
 ![alt text](https://github.com/whosivan/LM/blob/master/img/laser_maze.jpg?raw=true "Laser Maze")</p>
 **LM_v1.0**
 
@@ -56,7 +56,7 @@ Enjoy!
 Command Line Application Example
 ------------
 Step 1: Create input file: </p>
- <img align="https://github.com/whosivan/LM/blob/master/img/inputfileformat.png" alt="..."></p>
+![alt text](https://github.com/whosivan/LM/blob/master/img/inputfileformat.png "inputfile")</p>
 Step 2: Enjoy the game, type </p>
         `maze ./path/to/inputfile ./path/to/outputfile`</p>
 
