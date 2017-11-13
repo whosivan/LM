@@ -29,11 +29,6 @@ Both Mac OS X and Windows operating system should be able to execute the package
 MAC OS X provides the best user experience*
 
 ----------------------
-Unittest Results
-----------------------
-<img align="center" src="https://github.com/danielfather7/EASE-Project/blob/master/Project_Goal/figs/unittest_result.png" alt="...">
-
-----------------------
 Package Installation
 ----------------------
 **For Mac:**</p>
