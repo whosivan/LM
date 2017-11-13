@@ -60,6 +60,6 @@ Folders
 ---------
 **img** - Contains the img used in the ReadME.md.
 
-**Raw_code** - The folder contains raw code in jupyter notebook format.
+**Raw_code** - The folder contains raw code in jupyter notebook format (also a raw script that generates different test case as inputfile.
 
 **README.md** - descrption of background, Unittest, Software Installation and dependencies, Folder Descriptions and 
